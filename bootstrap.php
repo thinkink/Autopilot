@@ -305,7 +305,8 @@ $module->registerType('collection', [
 
             if ($view) {
 
-                $limit = 10;
+             //   $limit = 10;
+$limit = (isset($data['listItemsLimit'])) ? $data['listItemsLimit']: 10;
                 $page  = $this->param("page", 1);
                 $count = $module->app->module('collections')->collection($colname)->count();
                 $pages = ceil($count/$limit);
