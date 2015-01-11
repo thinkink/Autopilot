@@ -4,6 +4,7 @@
 %}
 
 <div class="uk-grid" data-uk-grid-margin ng-controller="collectionMenuItem">
+@trigger('autopilot.bootstrap.view')
     <div class="uk-width-2-3">
         <div class="uk-form-row">
             <label><span class="uk-badge app-badge">@lang('Collection')</span></label>
