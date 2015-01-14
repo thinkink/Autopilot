@@ -127,11 +127,11 @@ class Menu extends \Lime\Helper {
 
             $savedItem = null;
 
-            eval('$savedItem = $data'.$path.';'); // @TODO: rework without eval
+           ${"savedItem" } = $data .$path;
 
             $savedItem = array_merge($savedItem, $item);
 
-            eval('$data'.$path.' = $savedItem;'); // @TODO: rework without eval
+             ${'$data'.$path } = $savedItem;
 
             return $this->saveMenu($menu, $data);
         }
@@ -152,7 +152,7 @@ class Menu extends \Lime\Helper {
             $flat     = $this->flatten($menu);
 
             if (isset($flat[$parentId])) {
-                eval('$data'.$flat[$parentId]['path'].'[] = $item;'); // @TODO: rework without eval
+                ${'$data'.$flat[$parentId]['path'].'[]' } = $item;
             }
 
         } else {
